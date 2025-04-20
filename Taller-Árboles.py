@@ -17,29 +17,31 @@ class Arbol:
         self.cabeza = dato
         self.contador = 1
         self.nodos = [dato]
-    
+
+
     def asignarPadre(self, datoPadre, datoHijo):
-        nodoPadre = datoPadre
-        nodoHijo = datoHijo
-        nodoHijo.anterior = nodoPadre
-        if nodoPadre.anterior is None:
-            nodoPadre = self.cabeza
-        self.nodos.append(nodoHijo)
-        self.contador += 1
+        datoHijo.anterior = datoPadre
+    # Evitar agregar nodos duplicados
+        if datoHijo not in self.nodos:
+            self.nodos.append(datoHijo)
+            self.contador += 1
         return True
-    
+
+
+
     def peso(self):
         return self.contador
-    
+
+
     def altura(self, hoja):
         actual = hoja
         cont = 1
-        print(actual)
+        #print(actual)
         while actual.anterior:
             cont += 1
             actual = actual.anterior
         return cont
-    
+
     def orden(self):
         orden = 0
         for nodo in self.nodos:
@@ -49,7 +51,7 @@ class Arbol:
         return orden
 
 
-    
+
 #Instanciacion
 nodo1 = Nodo("gato")
 nodo2 = Nodo("perro")
