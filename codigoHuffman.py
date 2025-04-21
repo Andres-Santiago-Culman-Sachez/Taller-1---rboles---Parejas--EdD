@@ -51,4 +51,3 @@ codigos=generar_codigo_Huffman(arbolDeHuffman)
 
 for caracter,codigo in codigos.items():
     print(f"{caracter}: {codigo}")
-    
