@@ -1,3 +1,18 @@
+#Santiago Culma
+#Kevin David Basto Quintero
+
+""" 
+Los árboles de Huffman son
+ una técnica de compresión de datos que asigna códigos 
+ binarios de longitud variable a los símbolos de entrada, 
+ donde los símbolos más frecuentes reciben códigos más cortos
+ Complejidad temporal: O(N * logN)
+"""
+
+
+
+
+
 import heapq
 from collections import defaultdict, Counter
 
